@@ -8,6 +8,14 @@
 </head>
 <body>
     <h1>hola {{name}}</h1>
-        <p>{{categories}}</p>
-</body>
-</html>
+        <ul>
+          {% for category in categories%}
+            {% if category == 'code' %}
+                <li><b>{{category}}</b></li>
+            {% else %}
+                <li>{{category}}</li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+    </body>
+    </html>
